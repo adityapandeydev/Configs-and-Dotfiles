@@ -19,7 +19,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
-  #boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -116,6 +116,9 @@
     overskride
     kitty
     git
+    pkgs.go
+    pkgs.rustc
+    pkgs.rustup
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
