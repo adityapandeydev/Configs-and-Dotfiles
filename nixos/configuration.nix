@@ -116,24 +116,28 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    bat
     btop
+    fastfetch
     fzf
     git
     gparted
+    lsd
     overskride
-    pkgs.ghostty
-    pkgs.go
-    pkgs.neovim
-    pkgs.rustc
-    pkgs.rustup
-    pkgs.starship
-    pkgs.wget
+    ghostty
+    go
+    neovim
+    rustc
+    rustup
+    starship
+    wget
+    yazi
     vscode.fhs
     zinit
-    zsh
   ];
 
   programs.zsh.enable = true;
+  programs.lazygit.enable = true;
 
   # installing fonts
   fonts.packages = with pkgs; [
