@@ -21,7 +21,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
-  #boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
   # GRUB theme setting
   # boot.loader.grub.theme = "/boot/grub/themes/archcraft/archcraft/theme.txt";
