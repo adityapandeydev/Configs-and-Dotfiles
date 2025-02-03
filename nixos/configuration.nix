@@ -120,16 +120,19 @@ in
     btop
     fastfetch
     fzf
-    git
     gcc
+    git
+    ghostty
+    gleam
+    go
     gparted
     lsd
-    openjdk
-    overskride
-    ghostty
-    go
     neovim
     nodejs
+    openjdk
+    overskride
+    python310
+    pywal
     rustc
     rustup
     starship
@@ -138,6 +141,7 @@ in
     wget
     yazi
     zinit
+    zig_0_12
   ];
 
   programs.zsh.enable = true;
