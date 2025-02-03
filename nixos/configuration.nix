@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  unstable = import <unstable> { };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -19,7 +21,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
-  boot.loader.grub.useOSProber = true;
+  #boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -99,10 +101,12 @@
       kdePackages.kate
     #  thunderbird
     ];
+    shell = pkgs.zsh;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -110,16 +114,19 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pkgs.neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    vscode.fhs
-    overskride
-    kitty
     git
+    kitty
+    overskride
     pkgs.go
+    pkgs.neovim
     pkgs.rustc
     pkgs.rustup
+    pkgs.wget
+    vscode.fhs
+    zsh
   ];
+
+  programs.zsh.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
