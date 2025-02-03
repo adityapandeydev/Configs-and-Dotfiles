@@ -124,6 +124,7 @@ in
     gcc
     gparted
     lsd
+    openjdk
     overskride
     ghostty
     go
