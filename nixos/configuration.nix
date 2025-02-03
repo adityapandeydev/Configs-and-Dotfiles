@@ -23,6 +23,8 @@ in
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
   #boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
+  # GRUB theme setting
+  # boot.loader.grub.theme = "/boot/grub/themes/archcraft/archcraft/theme.txt";
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -114,19 +116,30 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    btop
+    fzf
     git
-    kitty
+    gparted
     overskride
+    pkgs.ghostty
     pkgs.go
     pkgs.neovim
     pkgs.rustc
     pkgs.rustup
+    pkgs.starship
     pkgs.wget
     vscode.fhs
+    zinit
     zsh
   ];
 
   programs.zsh.enable = true;
+
+  # installing fonts
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    fira-code
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
