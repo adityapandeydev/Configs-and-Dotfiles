@@ -121,18 +121,21 @@ in
     fastfetch
     fzf
     git
+    gcc
     gparted
     lsd
     overskride
     ghostty
     go
     neovim
+    nodejs
     rustc
     rustup
     starship
+    unzip
+    vscode.fhs
     wget
     yazi
-    vscode.fhs
     zinit
   ];
 
