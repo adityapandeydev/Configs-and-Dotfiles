@@ -21,7 +21,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
-  boot.loader.grub.useOSProber = true;
+  #boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
   # GRUB theme setting
   # boot.loader.grub.theme = "/boot/grub/themes/archcraft/archcraft/theme.txt";
@@ -70,7 +70,7 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  
+
   #Enable Bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
@@ -128,6 +128,7 @@ in
     gparted
     lsd
     neovim
+    nixd
     nodejs
     openjdk
     overskride
@@ -140,6 +141,7 @@ in
     vscode.fhs
     wget
     yazi
+    zed-editor
     zinit
     zig_0_12
   ];
