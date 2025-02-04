@@ -21,7 +21,7 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.efiSysMountPoint = "/boot";  # Mount point for the EFI partition
-  #boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
   # GRUB theme setting
   # boot.loader.grub.theme = "/boot/grub/themes/archcraft/archcraft/theme.txt";
@@ -166,6 +166,13 @@ in
     fira-code
   ];
 
+  # Clearing disk space
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
