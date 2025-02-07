@@ -172,7 +172,7 @@ format = '[[ $symbol( $environment) ](fg:text bg:surface2)]($style)'
 disabled = false
 time_format = "%R"
 style = "bg:surface0"
-format = '[[  $time ](fg:text bg:surface0)]($style)'
+format = '[[  $time ](fg:text_time bg:surface0)]($style)'
 
 [line_break]
 disabled = false
@@ -201,7 +201,8 @@ sky = "#89dceb"
 sapphire = "#74c7ec"
 blue = "#89b4fa"
 lavender = "#b4befe"
-text = "#cdd6f4"
+text = "#333333"
+text_time = "#cdd6f4"
 subtext1 = "#bac2de"
 subtext0 = "#a6adc8"
 overlay2 = "#9399b2"
