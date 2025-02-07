@@ -4,9 +4,9 @@ format = """
 [](mauve)\
 $os\
 $username\
-[](bg:lavender fg:mauve)\
+[](bg:blue fg:mauve)\
 $directory\
-[](fg:lavender bg:teal)\
+[](fg:blue bg:teal)\
 $git_branch\
 $git_status\
 [](fg:teal bg:red)\
@@ -50,7 +50,7 @@ style_root = "bg:mauve fg:text"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:text bg:lavender"
+style = "fg:text bg:blue"
 format = "[ $path ]($style)"
 truncation_length = 1
 truncation_symbol = "…/"
@@ -66,6 +66,11 @@ format = '[[($all_status$ahead_behind )](fg:text bg:teal)]($style)'
 
 [nodejs]
 symbol = ""
+style = "bg:red"
+format = '[[ $symbol( $version) ](fg:text bg:red)]($style)'
+
+[c]
+symbol = ""
 style = "bg:red"
 format = '[[ $symbol( $version) ](fg:text bg:red)]($style)'
 
@@ -179,7 +184,7 @@ error_symbol = '[](bold fg:red)'
 vimcmd_symbol = '[](bold fg:green)'
 vimcmd_replace_one_symbol = '[](bold fg:mauve)'
 vimcmd_replace_symbol = '[](bold fg:mauve)'
-vimcmd_visual_symbol = '[](bold fg:lavender)'
+vimcmd_visual_symbol = '[](bold fg:blue)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
