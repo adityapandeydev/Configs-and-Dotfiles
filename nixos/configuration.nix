@@ -108,7 +108,9 @@ in
 
   # Install firefox.
   programs.firefox.enable = true;
-
+  
+  # Enable flatpaks
+  services.flatpak.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -138,7 +140,7 @@ in
     nodejs
     openjdk
     overskride
-    python310
+    python312
     pywal
     rustc
     rustup

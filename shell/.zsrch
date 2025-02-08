@@ -1,5 +1,7 @@
 # Created by newuser for 5.9
 
+export PATH="/run/current-system/sw/bin:$HOME/.conda/bin:$PATH"
+
 # prompt configuration
 eval "$(starship init zsh)"
 

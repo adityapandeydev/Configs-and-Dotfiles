@@ -43,6 +43,27 @@ $line_break$character"""
 disabled = false
 style = "bg:red fg:crust"
 
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
 [username]
 show_always = true
 style_user = "bg:red fg:crust"
@@ -171,7 +192,7 @@ style = "bg:blue"
 format = '[[ $symbol( $context) ](fg:crust bg:blue)]($style)'
 
 [conda]
-symbol = "  "
+symbol = " "
 style = "bg:blue"
 format = '[[ $symbol( $environment) ](fg:crust bg:blue)]($style)'
 
