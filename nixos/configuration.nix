@@ -118,7 +118,6 @@ in
   environment.systemPackages = with pkgs; [
     bat
     btop
-    conda
     discord
     docker_26
     fastfetch

@@ -171,6 +171,7 @@ style = "bg:blue"
 format = '[[ $symbol( $context) ](fg:crust bg:blue)]($style)'
 
 [conda]
+symbol = "  "
 style = "bg:blue"
 format = '[[ $symbol( $environment) ](fg:crust bg:blue)]($style)'
 
