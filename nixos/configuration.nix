@@ -24,7 +24,7 @@ in
   boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
   # GRUB theme setting
-  # boot.loader.grub.theme = "/boot/grub/themes/archcraft/archcraft/theme.txt";
+  # boot.loader.grub.theme = "/boot/grub/themes/archcraft/theme.txt";
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -118,6 +118,7 @@ in
   environment.systemPackages = with pkgs; [
     bat
     btop
+    conda
     discord
     docker_26
     fastfetch
@@ -129,6 +130,9 @@ in
     gleam
     go
     gparted
+    jetbrains.datagrip
+    jetbrains.pycharm-professional
+    jetbrains.idea-ultimate
     lsd
     neovim
     nixd

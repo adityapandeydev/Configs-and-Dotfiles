@@ -68,3 +68,8 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias ls="lsd"
 alias lst="lsd --tree"
+alias ga="git add ."
+unalias gc
+gc(){
+    git commit -m "$*"
+}
