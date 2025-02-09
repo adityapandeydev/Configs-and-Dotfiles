@@ -192,19 +192,19 @@ in
   };
 
   # Mounting drives
-  fileSystems."/mnt/WindowsMain" = {
+  fileSystems."/run/media/adityapandey/WindowsMain" = {
     device = "UUID=54A775D76CB0E077";
     fsType = "ntfs-3g";
     options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
   };
 
-  fileSystems."/mnt/Data" = {
+  fileSystems."/run/media/adityapandey/Data" = {
     device = "UUID=CEAAE7B1AAE7946D";
     fsType = "ntfs-3g";
     options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
   };
 
-  fileSystems."/mnt/NewVolume" = {
+  fileSystems."/run/media/adityapandey/NewVolume" = {
     device = "UUID=9A1819B7181992FD";
     fsType = "ntfs-3g";
     options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
