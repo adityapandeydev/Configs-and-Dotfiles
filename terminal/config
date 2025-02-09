@@ -1,1 +1,3 @@
 theme = catppuccin-mocha
+gtk-titlebar = false
+fullscreen

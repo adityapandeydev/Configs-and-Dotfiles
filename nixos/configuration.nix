@@ -24,7 +24,17 @@ in
   boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 3600;
   # GRUB theme setting
-  # boot.loader.grub.theme = "/boot/grub/themes/archcraft/theme.txt";
+  boot.loader.grub.theme = pkgs.stdenv.mkDerivation {
+    pname = "distro-grub-themes";
+    version = "3.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "AdisonCavani";
+      repo = "distro-grub-themes";
+      rev = "v3.1";
+      hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";
+    };
+    installPhase = "cp -r customize/nixos $out";
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -105,9 +115,6 @@ in
     ];
     shell = pkgs.zsh;
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
   
   # Enable flatpaks
   services.flatpak.enable = true;
@@ -123,6 +130,7 @@ in
     discord
     docker_26
     fastfetch
+    floorp
     fzf
     gcc
     gimp
@@ -142,6 +150,7 @@ in
     nodejs
     openjdk
     overskride
+    protonvpn-gui
     python312
     pywal
     rustc
@@ -149,6 +158,12 @@ in
     signal-desktop
     starship
     unzip
+    (vivaldi.overrideAttrs
+      (oldAttrs: {
+        dontWrapQtApps = false;
+        dontPatchELF = true;
+        nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [pkgs.kdePackages.wrapQtAppsHook];
+      }))
     vlc
     vscode.fhs
     wget
@@ -181,24 +196,24 @@ in
   };
 
   # Mounting drives
-  fileSystems."/mnt/Windows-main" = {
+  fileSystems."/mnt/WindowsMain" = {
     device = "UUID=54A775D76CB0E077";
     fsType = "ntfs-3g";
-    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+    options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
   };
 
   fileSystems."/mnt/Data" = {
     device = "UUID=CEAAE7B1AAE7946D";
     fsType = "ntfs-3g";
-    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+    options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
   };
 
-  fileSystems."/mnt/New-Volume" = {
+  fileSystems."/mnt/NewVolume" = {
     device = "UUID=9A1819B7181992FD";
     fsType = "ntfs-3g";
-    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+    options = [ "rw" "nofail" "uid=1000" "gid=100" "umask=0002" "windows_names" "big_writes" "x-systemd.mount" ];
   };
-  
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
