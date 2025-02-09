@@ -179,6 +179,25 @@ in
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
+
+  # Mounting drives
+  fileSystems."/mnt/Windows-main" = {
+    device = "UUID=54A775D76CB0E077";
+    fsType = "ntfs-3g";
+    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+  };
+
+  fileSystems."/mnt/Data" = {
+    device = "UUID=CEAAE7B1AAE7946D";
+    fsType = "ntfs-3g";
+    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+  };
+
+  fileSystems."/mnt/New-Volume" = {
+    device = "UUID=9A1819B7181992FD";
+    fsType = "ntfs-3g";
+    options = [ "defaults" "nofail" "uid=1000" "gid=100" "umask=0022" "x-systemd.automount" ];
+  };
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
