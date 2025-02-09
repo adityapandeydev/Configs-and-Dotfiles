@@ -1,3 +1,4 @@
 theme = catppuccin-mocha
 gtk-titlebar = false
+background-opacity = 0.5
 fullscreen
