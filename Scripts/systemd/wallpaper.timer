@@ -1,0 +1,10 @@
+[Unit]
+Description=Run wallpaper changer every 6 hours
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=6h
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=Change wallpaper every 6 hours
+
+[Service]
+Type=oneshot
+ExecStart=/home/yourusername/change_wallpaper.sh
