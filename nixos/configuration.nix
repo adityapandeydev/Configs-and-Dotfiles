@@ -138,6 +138,7 @@ in
     jetbrains.datagrip
     jetbrains.pycharm-professional
     jetbrains.idea-ultimate
+    jetbrains.webstorm
     kde-cli-tools
     libsForQt5.index
     lsd
