@@ -1,0 +1,2 @@
+Add a script to run all symlink commands at once
+no warning when clicking on shutdown reboot and logout buttons in the dashboard menu
