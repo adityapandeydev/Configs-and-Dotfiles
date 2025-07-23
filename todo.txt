@@ -5,4 +5,4 @@ mod + v keybind issue on some apps not becoming full screen (floating window)
 
 
 
-2. Clipboard 3. App Launcher 4. Window Switching 5. Workspace Workflow 6. Power Menu 7. Brightness Issue 8. Lock Screen / Idle 9. Audio Controls 10. Final Wayle Configuration 11. Matugen Integration
+6. Power Menu 7. Brightness Issue 8. Lock Screen / Idle 9. Audio Controls 10. Final Wayle Configuration 11. Matugen Integration
