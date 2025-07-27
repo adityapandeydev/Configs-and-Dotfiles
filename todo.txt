@@ -1,12 +1,11 @@
 Add a script to run all symlink commands at once
-no warning when clicking on shutdown reboot and logout buttons in the dashboard menu
-mod + v keybind issue on some apps not becoming full screen (floating window)
-weather to show my location
-lock button in dashboard
+mod + T keybind issue on some apps not becoming full screen (floating window)
+animations
+wallpaper engine
+rofi ui configuration
+terminal should open in floating on new screen and window mode if something is already present
+sddm ui
+scroll feature in brightness and audio
 
+9. Audio Controls 11. Matugen Integration
 
-
-6. Power Menu 7. Brightness Issue 9. Audio Controls 11. Matugen Integration
-
-
-Wait for next wayle update 
