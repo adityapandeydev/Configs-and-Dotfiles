@@ -119,7 +119,4 @@ label-color = "green"
 label-max-length = 20
 
 [wallpaper]
-transition-type = "fade"
-transition-duration = 0.5
-transition-fps = 144
-cycling-interval-mins = 1
+engine-enabled = false
