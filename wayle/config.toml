@@ -5,6 +5,29 @@ font-sans = "JetBrainsMono Nerd Font Mono"
 scale = 0.699999988079071
 layer = "background"
 
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "dashboard",
+    "hyprland-workspaces",
+    "weather",
+    "notifications",
+]
+center = ["clock"]
+right = [
+    { name = "1", modules = [
+    "bluetooth",
+    "network",
+] },
+    { name = "2", modules = [
+    "brightness",
+    "volume",
+    "microphone",
+] },
+    "battery",
+]
+
 [styling.palette]
 bg = "#11111b"
 surface = "#181825"
@@ -99,6 +122,4 @@ label-max-length = 20
 transition-type = "fade"
 transition-duration = 0.5
 transition-fps = 144
-cycling-enabled = true
-cycling-directory = "/home/adityapandey/Pictures/Wallpapers/"
 cycling-interval-mins = 1
