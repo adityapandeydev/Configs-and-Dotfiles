@@ -4,8 +4,6 @@ animations
 rofi ui configuration
 terminal should open in floating on new screen and window mode if something is already present
 sddm ui
-wallpaper engine
-arranging window size
 moving floating windows using shift + mouse
 
 11. Matugen Integration
