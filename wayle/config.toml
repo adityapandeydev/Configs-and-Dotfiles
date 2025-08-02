@@ -2,7 +2,7 @@
 font-sans = "JetBrainsMono Nerd Font Mono"
 
 [bar]
-scale = 0.699999988079071
+scale = 0.70
 layer = "background"
 
 [[bar.layout]]
