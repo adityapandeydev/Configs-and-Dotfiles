@@ -76,3 +76,5 @@ unalias gc
 gc(){
     git commit -m "$*"
 }
+
+export PATH=$HOME/.local/bin:$PATH

@@ -3,7 +3,7 @@ font-sans = "JetBrainsMono Nerd Font Mono"
 
 [bar]
 scale = 0.70
-layer = "background"
+layer = "top"
 
 [[bar.layout]]
 monitor = "*"

@@ -1,10 +1,7 @@
 Add a script to run all symlink commands at once
-mod + T keybind issue on some apps not becoming full screen (floating window)
 animations
 rofi ui configuration
 terminal should open in floating on new screen and window mode if something is already present
-sddm ui
-moving floating windows using shift + mouse
 
 11. Matugen Integration
 
