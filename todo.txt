@@ -1,5 +1,4 @@
 Add a script to run all symlink commands at once
-animations
 
 11. Matugen Integration
 
