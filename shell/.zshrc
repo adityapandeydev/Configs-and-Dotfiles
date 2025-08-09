@@ -66,7 +66,7 @@ zstyle ':completion:*' menu select
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # aliases
-alias update="sudo nixos-rebuild switch"
+alias update="sudo pacman -Syu"
 alias btop="btop --force-utf"
 alias ff="fastfetch"
 alias c="clear"
@@ -82,5 +82,31 @@ unalias gc
 gc(){
     git commit -m "$*"
 }
+
+# Modern tool replacements
+alias cat="bat"
+alias lg="lazygit"
+alias v="nvim"
+alias nv="nvim ."
+alias y="yazi"
+
+# Git Shortcuts
+alias gs="git status"
+alias gd="git diff"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gp="git push"
+alias gl="git pull"
+alias glog="git log --oneline -n 10"
+
+# Docker Shortcuts
+alias dps="docker ps"
+alias dpa="docker ps -a"
+alias di="docker images"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+
+# Helpers
+alias path="echo -e \${PATH//:/\\\\n}"
 
 export PATH=$HOME/.local/bin:$PATH
