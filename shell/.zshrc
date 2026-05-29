@@ -3,8 +3,11 @@
 # prompt configuration
 eval "$(starship init zsh)"
 
+autoload -Uz compinit
+compinit
+
 # fzf configuration
-source <(fzf --zsh)
+eval "$(fzf --zsh)"
 
 # zinit configuration
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -27,7 +30,6 @@ zinit snippet OMZP::command-not-found
 
 # Basic options
 setopt autocd
-setopt correct
 setopt interactivecomments
 setopt magicequalsubst
 setopt nonomatch
@@ -54,7 +56,7 @@ setopt hist_find_no_dups
 # Completion Styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
+zstyle ':completion:*' menu select
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # aliases

@@ -58,6 +58,7 @@ Alpine = ""
 Amazon = ""
 Android = ""
 Arch = "󰣇"
+CachyOS = "󰣇"
 Artix = "󰣇"
 CentOS = ""
 Debian = "󰣚"
@@ -88,8 +89,19 @@ style = "bg:yellow"
 format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 
 [git_status]
-style = "bg:yellow"
+disabled = false
+style = "bg:yellow fg:crust"
 format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+up_to_date = '[ ✓](bg:yellow fg:green)'
+untracked = '[?($count)](bg:yellow fg:crust)'
+stashed = '[$](bg:yellow fg:crust)'
+modified = '[!($count)](bg:yellow fg:crust)'
+renamed = '[»($count)](bg:yellow fg:crust)'
+deleted = '[✘($count)](bg:yellow fg:crust)'
+staged = '[++($count)](bg:yellow fg:crust)'
+ahead = '[⇡($count)](bg:yellow fg:crust)'
+diverged = '⇕[(bg:yellow fg:crust)[⇡($ahead_count)](bg:yellow fg:crust)[⇣($behind_count)](bg:yellow fg:crust)](bg:yellow fg:crust)'
+behind = '[⇣($count)](bg:yellow fg:crust)'
 
 [nodejs]
 symbol = ""
@@ -207,8 +219,8 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[[➜](bold fg:green)❯](peach)'
-error_symbol = '[[➜](bold fg:red)❯](peach)'
+success_symbol = '[[➜](bold fg:green) ❯](peach)'
+error_symbol = '[[➜](bold fg:red) ❯](peach)'
 vimcmd_symbol = '[](bold fg:green)'
 vimcmd_replace_one_symbol = '[](bold fg:red)'
 vimcmd_replace_symbol = '[](bold fg:red)'
