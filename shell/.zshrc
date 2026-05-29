@@ -62,6 +62,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # aliases
 alias update="sudo nixos-rebuild switch"
 alias btop="btop --utf-force"
+alias ff="fastfetch"
 alias c="clear"
 alias q="exit"
 alias ..="cd .."
