@@ -5,29 +5,6 @@ font-sans = "JetBrainsMono Nerd Font Mono"
 scale = 0.699999988079071
 layer = "background"
 
-[[bar.layout]]
-monitor = "*"
-show = true
-left = [
-    "dashboard",
-    "hyprland-workspaces",
-    "weather",
-    "notifications",
-]
-center = ["clock"]
-right = [
-    { name = "1", modules = [
-    "bluetooth",
-    "network",
-] },
-    { name = "2", modules = [
-    "brightness",
-    "volume",
-    "microphone",
-] },
-    "battery",
-]
-
 [styling.palette]
 bg = "#11111b"
 surface = "#181825"
@@ -49,11 +26,17 @@ label-color = "red"
 border-color = "green"
 icon-bg-color = "green"
 label-color = "green"
+scroll-up = "brightnessctl set 5%+"
+scroll-down = "brightnessctl set 5%-"
 
 [modules.cava]
 framerate = 144
 style = "wave"
 color = "green"
+
+[modules.clock]
+format = "%a %b %d %H:%M"
+right-click = ""
 
 [modules.dashboard]
 border-color = "red"
@@ -71,6 +54,8 @@ active-color = "#fab387"
 border-color = "#fab387"
 icon-bg-color = "#fab387"
 label-color = "#fab387"
+scroll-up = "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+"
+scroll-down = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-"
 
 [modules.network]
 border-color = "blue"
@@ -96,8 +81,13 @@ label-color = "yellow"
 border-color = "#fab387"
 icon-bg-color = "#fab387"
 label-color = "#fab387"
+scroll-up = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+scroll-down = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 
 [modules.weather]
+location = "Deoria"
+time-format = "24h"
+refresh-interval-seconds = 180
 border-color = "green"
 icon-bg-color = "green"
 label-color = "green"

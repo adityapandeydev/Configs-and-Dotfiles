@@ -5,7 +5,7 @@ wallpaper engine
 rofi ui configuration
 terminal should open in floating on new screen and window mode if something is already present
 sddm ui
-scroll feature in brightness and audio
 
-9. Audio Controls 11. Matugen Integration
+
+11. Matugen Integration
 
