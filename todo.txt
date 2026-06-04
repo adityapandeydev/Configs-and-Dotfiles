@@ -1,4 +1,5 @@
 Add a script to run all symlink commands at once
+dolphin application chooser
 
 11. Matugen Integration
 
