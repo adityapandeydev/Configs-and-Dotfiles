@@ -125,4 +125,11 @@
     [wallpaper]
     engine-enabled = false
   '';
+
+  xdg.configFile."ghostty/config".text = ''
+    gtk-titlebar = false
+    background-opacity = 0.5
+    font-family = JetBrainsMono Nerd Font Mono
+    theme = Catppuccin Mocha
+  '';
 }
