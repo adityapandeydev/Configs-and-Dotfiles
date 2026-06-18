@@ -132,4 +132,8 @@
     font-family = JetBrainsMono Nerd Font Mono
     theme = Catppuccin Mocha
   '';
+
+  # Link Rofi and Scripts directly
+  xdg.configFile."rofi".source = ../rofi;
+  xdg.configFile."Scripts".source = ../Scripts;
 }
