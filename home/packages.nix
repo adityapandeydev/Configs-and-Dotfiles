@@ -51,5 +51,6 @@
     blueman
     brightnessctl
     wireplumber
+    swww # Placeholder for awww-daemon until we package it
   ];
 }
