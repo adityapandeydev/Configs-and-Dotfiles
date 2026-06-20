@@ -38,8 +38,11 @@
   security.pam.services.hyprlock = {};
 
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "sddm-sugar-candy";
+  };
   services.desktopManager.plasma6.enable = true;
 
   services.xserver.xkb = {
@@ -75,6 +78,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    sddm-sugar-candy
     git
     wget
     curl
