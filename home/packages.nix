@@ -26,7 +26,6 @@
     signal-desktop
     vlc
     gimp
-    floorp
 
     # Utilities
     btop
