@@ -15,7 +15,7 @@
 
     # Databases
     postgresql
-    mysql80
+    mysql
 
     # Applications
     discord
