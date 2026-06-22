@@ -22,7 +22,7 @@
     vscode-fhs
     zed-editor
     inputs.zen-browser.packages."${pkgs.system}".default
-    protonvpn-gui
+    proton-vpn
     signal-desktop
     vlc
     gimp
@@ -49,6 +49,6 @@
     blueman
     brightnessctl
     wireplumber
-    swww # Placeholder for awww-daemon until we package it
+    awww
   ];
 }
