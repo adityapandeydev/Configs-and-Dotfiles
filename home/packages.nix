@@ -11,7 +11,7 @@
     gcc
     nodejs
     gleam
-    zig_0_12
+    zig
 
     # Databases
     postgresql
