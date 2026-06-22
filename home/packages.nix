@@ -32,7 +32,7 @@
     fastfetch
     lazygit
     neovim
-    rofi-wayland
+    rofi
     lsd
     bat
     fzf
