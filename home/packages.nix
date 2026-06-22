@@ -42,7 +42,6 @@
     overskride
     nixd
     zinit
-    pywal
 
     # Wayland tools
     wl-clipboard
