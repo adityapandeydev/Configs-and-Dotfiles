@@ -15,7 +15,7 @@
 
     # Databases
     postgresql
-    mysql
+    mysql84
 
     # Applications
     discord
