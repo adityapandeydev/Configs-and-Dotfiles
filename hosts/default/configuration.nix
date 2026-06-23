@@ -41,7 +41,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "sddm-sugar-candy";
+    # theme = "sddm-sugar-candy";
   };
   services.desktopManager.plasma6.enable = true;
 
@@ -77,7 +77,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    sddm-sugar-candy
     git
     wget
     curl
