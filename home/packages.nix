@@ -50,5 +50,7 @@
     brightnessctl
     wireplumber
     awww
+    ghostty
+    wayle
   ];
 }

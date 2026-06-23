@@ -14,6 +14,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader.grub.useOSProber = true;
   boot.loader.timeout = 5;
+  boot.kernelParams = [ "video=hyperv_fb:1920x1080" ];
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -35,6 +36,7 @@
 
   # Enable Wayland / Hyprland system-level requirements
   programs.hyprland.enable = true;
+  programs.hyprland.withUWSM = true;
   security.pam.services.hyprlock = {};
 
   services.xserver.enable = true;
@@ -43,7 +45,6 @@
     wayland.enable = true;
     # theme = "sddm-sugar-candy";
   };
-  services.desktopManager.plasma6.enable = true;
 
   services.xserver.xkb = {
     layout = "us";

@@ -1,0 +1,4 @@
+gtk-titlebar = false
+background-opacity = 0.5
+font-family = JetBrainsMono Nerd Font Mono
+theme = Catppuccin Mocha
