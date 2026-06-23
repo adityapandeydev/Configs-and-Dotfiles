@@ -87,8 +87,7 @@
   programs.zsh.enable = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
-    fira-code
+    nerd-fonts.jetbrains-mono
   ];
 
   nix.gc = {
